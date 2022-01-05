@@ -125,4 +125,11 @@ class SuratController extends Controller
     {
         return Datatables::of(Surat::query())->make(true);
     }
+
+    public function cetakSurat()
+    {
+        return view('dashboard.surat_perintah.cetak',[
+            'surats' => Surat::with(['pegawai','perjalanan','pangkat','jabatan'])->get()
+        ]);
+    }
 }

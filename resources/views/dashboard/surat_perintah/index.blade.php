@@ -10,7 +10,6 @@
 
     <div class="container container-fluid d-flex justify-content-beetwen">
         <a href="/surat/create" class="btn btn-success mb-3 me-lg-3"><i class="fas fa-plus-square"></i></a>
-        {{-- <a href="/surat/cetak" class="btn btn-dark mb-3" target="_blank"><i class="mdi mdi-printer"></i></a> --}}
     </div>
         <div class="container container-fluid">
             <table class="table table-responsive table-striped" id="myTable">
@@ -29,6 +28,7 @@
                     <td>{{ $surat->nomor }}</td>
                     <td>{!! $surat->uraian !!}</td>
                     <td>
+                        <a href="/surat/cetak/{{ $surat->id }}" class="btn btn-dark" target="_blank"><i class="fas fa-print"></i></a>|
                         <a href="/surat/{{ $surat->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
                         <form action="/surat/{{ $surat->id }}" method="post" class="d-inline">
                             @method('delete')

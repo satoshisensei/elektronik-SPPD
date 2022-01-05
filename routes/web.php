@@ -30,6 +30,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dataperjalanan',[PerjalananController::class, 'data'])->name('perjalanan-data');
     Route::get('/datasurat',[SuratController::class, 'data'])->name('surat-data');
 
+    Route::get('/surat/cetak/{surat}',[SuratController::class,'cetakSurat'])->name('surat.cetak');
+
     Route::resource('/pegawai', PegawaiController::class)->except('show');
     Route::resource('/perjalanan', PerjalananController::class)->except('show');
     Route::resource('/surat',SuratController::class)->except('show');
