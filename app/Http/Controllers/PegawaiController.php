@@ -43,7 +43,15 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'pangkat_id' => 'required',
+            'jabatan_id' => 'required',
+            'nama' => 'required',
+            'nip' => 'required'
+        ]);
+
+        Pegawai::create($validate);
+        return redirect('/pegawai')->with('success','Added Successfully!');
     }
 
     /**
@@ -81,7 +89,16 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, Pegawai $pegawai)
     {
-        //
+        $rules = [
+            'pangkat_id' => 'required',
+            'jabatan_id' => 'required',
+            'nama' => 'required',
+            'nip' => 'required'
+        ];
+
+        $validate = $request->validate($rules);
+        Pegawai::where('id',$pegawai->id)->update($validate);
+        return redirect('/surat')->with('success','Updated Successfully!');
     }
 
     /**
