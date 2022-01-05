@@ -107,10 +107,63 @@
                 </td>
             </tr>
             <tr>
+                <th scope="row">3</th>
+                <th scope="row">
+                a. Pangkat dan Golongan <br>
+                b. Jabatan
+                </th>
+                <td>
+                {{-- {{ $surats[0]->pangkat->golongan }}/{{ $surats[0]->pangkat->ruang }} --}}
+                </td>
+            </tr>
+            <tr>
                 <th scope="row">4</th>
                 <th scope="row">Maksud Perjalanan</th>
                 <td>{!! $surats[0]->uraian !!}</td>
-
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <th scope="row">
+                a. Tempat Berangkat <br>
+                b. Tempat Tujuan
+                </th>
+                <td>
+                a. {{ $surats[0]->perjalanan->tempat_berangkat }} <br>
+                b. {{ $surats[0]->perjalanan->tempat_tujuan }}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <th scope="row">
+                a. Lamanya Perjalanan <br>
+                b. Tanggal Berangkat <br>
+                c. Tanggal Harus Kembali
+                </th>
+                <td>
+                a. <br>
+                b. {{ $surats[0]->perjalanan->tanggal_berangkat }} <br>
+                c. {{ $surats[0]->perjalanan->tanggal_kembali }}
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <th scope="row">Angkutan yang digunakan</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <th scope="row">Pengikut : Nama</th>
+                <th scope="row">Umur dan Hubungan Kekeluargaan</th>
+            </tr>
+            <tr>
+                <th scope="row">9</th>
+                <th scope="row">Instansi</th>
+                <td>Dinas Perpustakaan Kota Samarinda</td>
+            </tr>
+            <tr>
+                <th scope="row">10</th>
+                <th scope="row">Keterangan dan Lain-lain</th>
+                <td></td>
             </tr>
         </table>
     </div>
