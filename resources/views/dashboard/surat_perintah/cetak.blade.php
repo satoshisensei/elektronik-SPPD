@@ -82,16 +82,16 @@
     <br>
     <div class="container container-fluid">
         <div class="d-flex justify-content-center">
-            <h2 class="h3 text-bold text-decoration-underline text-uppercase">Surat Perintah Perjalanan Dinas</h2>
+            <h2 class="h4 text-bold text-decoration-underline text-uppercase">Surat Perintah Perjalanan Dinas</h2>
         </div>
         <div class="d-flex justify-content-center">
-            <h2 class="h4">Nomor : {{ $surats[0]->nomor }}</h2>
+            <h2 class="h5">Nomor : {{ $surats[0]->nomor }}</h2>
         </div>
     </div>
     <br>
 
     <div class="container container-fluid">
-        <table class="table table-bordered">
+        <table class="table table-bordered h6">
             <tr>
                 <th scope="row">1</th>
                 <th scope="row">Pejabatan berwenang yang memberi Perintah</th>
@@ -113,7 +113,8 @@
                 b. Jabatan
                 </th>
                 <td>
-                {{-- {{ $surats[0]->pangkat->golongan }}/{{ $surats[0]->pangkat->ruang }} --}}
+                a. {{ $pangkats[0]->golongan }}/{{ $pangkats[0]->ruang }} <br>
+                b. {{ $jabatans[0]->nama }}
                 </td>
             </tr>
             <tr>
@@ -159,11 +160,6 @@
                 <th scope="row">9</th>
                 <th scope="row">Instansi</th>
                 <td>Dinas Perpustakaan Kota Samarinda</td>
-            </tr>
-            <tr>
-                <th scope="row">10</th>
-                <th scope="row">Keterangan dan Lain-lain</th>
-                <td></td>
             </tr>
         </table>
     </div>

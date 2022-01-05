@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Surat;
+use App\Models\Jabatan;
+use App\Models\Pangkat;
 use App\Models\Pegawai;
 use App\Models\Perjalanan;
 use Illuminate\Http\Request;
@@ -129,7 +131,9 @@ class SuratController extends Controller
     public function cetakSurat()
     {
         return view('dashboard.surat_perintah.cetak',[
-            'surats' => Surat::with(['pegawai','perjalanan','pangkat','jabatan'])->get()
+            'surats' => Surat::with(['pegawai','perjalanan'])->get(),
+            'pangkats' => Pangkat::get(),
+            'jabatans' => Jabatan::get()
         ]);
     }
 }
