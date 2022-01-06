@@ -101,11 +101,11 @@
                 Data Tambahan
             </div>
 
-            <!-- Nav Item - Users Menu -->
+            <!-- Nav Item - Kendaraan Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/jabatan">
-                    <i class="fas fa-fw fa-user-astronaut"></i>
-                    <span>Users</span></a>
+                <a class="nav-link" href="/kendaraab">
+                    <i class="fas fa-fw fa-car"></i>
+                    <span>Kendaraan</span></a>
             </li>
 
             <!-- Nav Item - Pangkat Menu -->
