@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -41,5 +43,21 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('pages.login');
+    }
+
+    protected function authenticated(Request $request, $user)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        if(Auth::attempt($credentials))
+        {
+            $request->session()->regenerate();
+            return redirect()->intended('/home');
+        }
+
+        return redirect('/login')->with('errors','Login Failed!');
     }
 }

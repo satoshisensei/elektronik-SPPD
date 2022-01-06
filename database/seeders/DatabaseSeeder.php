@@ -8,8 +8,9 @@ use Database\Seeders\SuratSeeder;
 use Database\Seeders\JabatanSeeder;
 use Database\Seeders\PangkatSeeder;
 use Database\Seeders\PegawaiSeeder;
-use Database\Seeders\PerjalananSeeder;
+use Database\Seeders\PengikutSeeder;
 use Database\Seeders\KendaraanSeeder;
+use Database\Seeders\PerjalananSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,6 +25,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             JabatanSeeder::class,
             PangkatSeeder::class,
+            PengikutSeeder::class,
             PegawaiSeeder::class,
             PerjalananSeeder::class,
             KendaraanSeeder::class,

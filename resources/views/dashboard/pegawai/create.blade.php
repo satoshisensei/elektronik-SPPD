@@ -37,7 +37,7 @@
                             <label for="pangkat_id" class="form-label">Pangkat : </label>
                             <select class="form-select" name="pangkat_id">
                                 @foreach($pangkats as $pangkat)
-                                    @if(old('pangkat_id') == $pangkat->id)
+                                    @if(old('pangkat_id') == $pangkat_id)
                                         <option value="{{ $pangkat->id }}" selected>{{ $pangkat->golongan }}/{{ $pangkat->ruang }}</option>
                                     @else
                                         <option value="{{ $pangkat->id }}">{{ $pangkat->golongan }}/{{ $pangkat->ruang }}</option>
@@ -54,7 +54,7 @@
                             <label for="jabatan_id" class="form-label">Jabatan</label>
                             <select class="form-select" name="jabatan_id">
                                 @foreach($jabatans as $jabatan)
-                                    @if(old('jabatan_id') == $jabatan->id)
+                                    @if(old('jabatan_id') == $jabatan_id)
                                         <option value="{{ $jabatan->id }}" selected>{{ $jabatan->nama }}</option>
                                     @else
                                         <option value="{{ $jabatan->id }}">{{ $jabatan->nama }}</option>

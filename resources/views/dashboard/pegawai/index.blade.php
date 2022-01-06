@@ -1,4 +1,3 @@
-{{-- @dd($pegawais) --}}
 @extends('dashboard.layouts.app')
 
 @section('container')

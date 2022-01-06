@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
             'email' => 'admin.perpustakaan@gmail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('admin123'),
+            'is_admin' => 1,
             'remember_token' => Str::random(10),
         ]);
 

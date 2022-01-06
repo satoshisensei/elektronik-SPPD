@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+// use PDF;
 use App\Models\Surat;
 use App\Models\Jabatan;
 use App\Models\Pangkat;
@@ -139,4 +140,16 @@ class SuratController extends Controller
             'jabatans' => Jabatan::get()
         ]);
     }
+
+    // public function pdfSurat()
+    // {
+    //     $data = [
+    //         'surats' => Surat::with(['pegawai','perjalanan'])->get(),
+    //         'pangkats' => Pangkat::get(),
+    //         'jabatans' => Jabatan::get()
+    //     ];
+    //     $pdf = \PDF::loadView('dashboard.surat_perintah.cetak', $data);
+    //     $pdf->getMpdf();
+    //     return $pdf->stream('sppd.pdf');
+    // }
 }

@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
 
     <div class="container">
 
@@ -39,6 +39,11 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
+                                    @if(session('errors'))
+                                        <div class="alert alert-danger container container-fluid col-lg-12" role="alert">
+                                            {{ session('danger') }}
+                                        </div>
+                                    @endif
                                     <form class="user" method="post" action="{{ route('login') }}">
                                     @csrf
                                         <div class="form-group">
@@ -64,7 +69,7 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-success btn-user btn-block">
                                             Login
                                         </button>
                                         <hr>

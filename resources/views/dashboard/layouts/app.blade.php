@@ -40,7 +40,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -92,10 +92,10 @@
                 </a>
             </li>
 
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
+            @can('admin')
             <!-- Heading -->
             <div class="sidebar-heading">
                 Data Tambahan
@@ -103,7 +103,14 @@
 
             <!-- Nav Item - Kendaraan Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/kendaraab">
+                <a class="nav-link" href="/pengikut">
+                    <i class="fas fa-fw fa-share-square"></i>
+                    <span>Pengikut</span></a>
+            </li>
+
+            <!-- Nav Item - Kendaraan Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/kendaraan">
                     <i class="fas fa-fw fa-car"></i>
                     <span>Kendaraan</span></a>
             </li>
@@ -124,6 +131,8 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+            @endcan
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -175,7 +184,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
@@ -233,7 +242,7 @@
                     <form action="{{ route('logout') }}" method="post">
                     @method('post')
                     @csrf
-                    <button class="btn btn-primary" type="submit"><i class="fas fa-sm fa-fw fa-user-alt-slash text-white-50"></i> Logout</button>
+                    <button class="btn btn-success" type="submit"><i class="fas fa-sm fa-fw fa-user-alt-slash text-white-50"></i> Logout</button>
                     </form>
                 </div>
             </div>

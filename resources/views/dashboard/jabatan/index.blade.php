@@ -1,4 +1,3 @@
-
 @extends('dashboard.layouts.app')
 
 @section('container')
@@ -9,29 +8,26 @@
     @endif
 
     <div class="container container-fluid d-flex justify-content-beetwen">
-        <a href="/surat/create" class="btn btn-success mb-3 me-lg-3"><i class="fas fa-plus-square"></i></a>
+        <a href="/jabatan/create" class="btn btn-success mb-3 me-lg-3"><i class="fas fa-plus-square"></i></a>
+        {{-- <a href="/jabatan/cetak" class="btn btn-dark mb-3" target="_blank"><i class="mdi mdi-printer"></i></a> --}}
     </div>
         <div class="container container-fluid">
             <table class="table table-responsive table-striped" id="myTable">
                 <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Nomor</th>
-                    <th scope="col">Uraian</th>
+                    <th scope="col">Nama</th>
                     <th scope="col">Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($surats as $surat)
+                @foreach ($jabatans as $jabatan)
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
-                    <td>{{ $surat->nomor }}</td>
-                    <td>{!! $surat->uraian !!}</td>
+                    <td>{{ $jabatan->nama }}</td>
                     <td>
-                        <a href="/surat/cetak/{{ $surat->id }}" class="btn btn-secondary" target="_blank"><i class="fas fa-print"></i></a>|
-                        {{-- <a href="/surat/pdf/{{ $surat->id }}" class="btn btn-dark" target="_blank"><i class="fas fa-file-pdf"></i></a>| --}}
-                        <a href="/surat/{{ $surat->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
-                        <form action="/surat/{{ $surat->id }}" method="post" class="d-inline">
+                        <a href="/jabatan/{{ $jabatan->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
+                        <form action="/jabatan/{{ $jabatan->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
                             <button class="btn btn-danger border-0" onclick="confirm('Are you sure?')"><i class="fas fa-trash"></i></button>
@@ -46,13 +42,12 @@
         @push('scripts')
         <script>
         $(function() {
-            $('#surats-table').DataTable({
+            $('#jabatans-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '{!! route('surat-data') !!}',
+                ajax: '{!! route('jabatan-data') !!}',
                 columns: [
-                    { data: 'nomor', name: 'nomor' },
-                    { data: 'uraian', name: 'uraian' },
+                    { data: 'nama', name: 'nama' },
                 ]
             });
         });
