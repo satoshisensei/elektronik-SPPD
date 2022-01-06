@@ -29,6 +29,17 @@
                             @enderror
                         </div>
                         <div class="mb-3">
+                            <label for="lama_perjalanan" class="form-label">Lamanya Perjalanan</label>
+                            <input type="text" class="form-control @error('lama_perjalanan')
+                                is-invalid
+                            @enderror" id="lama_perjalanan" name="lama_perjalanan" placeholder="Masukan Durasi Perjalanan..." autofocus required value="{{ old('lama_perjalanan') }}">
+                            @error('lama_perjalanan')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
                             <label for="tempat_berangkat" class="form-label">Tempat Berangkat</label>
                             <input type="text" class="form-control @error('tempat_berangkat')
                                 is-invalid

@@ -15,6 +15,7 @@ class PerjalananFactory extends Factory
     {
         return [
             'kendaraan_id' => mt_rand(1,6),
+            'lama_perjalanan' => $this->faker->numerify('##'),
             'tempat_tujuan' => $this->faker->city(),
             'tanggal_berangkat' => $this->faker->date(),
             'tanggal_kembali' => $this->faker->date(now())

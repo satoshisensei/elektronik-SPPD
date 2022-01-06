@@ -45,6 +45,7 @@ class PerjalananController extends Controller
     {
         $validate = $request->validate([
             'kendaraan_id' => 'required',
+            'lama_perjalanan' => 'required|max:255',
             'tempat_berangkat' => 'required|max:255',
             'tempat_tujuan' => 'required|max:255',
             'tanggal_berangkat' => 'required',
@@ -90,6 +91,7 @@ class PerjalananController extends Controller
     public function update(Request $request, Perjalanan $perjalanan)
     {
         $rules = [
+            'lama_perjalanan' => 'required|max:255',
             'tempat_berangkat' => 'required|max:255',
             'tempat_tujuan' => 'required|max:255',
             'tanggal_berangkat' => 'required',

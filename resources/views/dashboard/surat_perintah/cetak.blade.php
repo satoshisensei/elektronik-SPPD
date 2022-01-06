@@ -141,7 +141,7 @@
                 c. Tanggal Harus Kembali
                 </th>
                 <td>
-                a. <br>
+                a. {{ $surats[0]->perjalanan->lama_perjalanan }} Hari<br>
                 b. {{ $surats[0]->perjalanan->tanggal_berangkat }} <br>
                 c. {{ $surats[0]->perjalanan->tanggal_kembali }}
                 </td>

@@ -18,6 +18,7 @@
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Kendaraan</th>
+                    <th scope="col">Lama Perjalanan</th>
                     <th scope="col">Tempat Berangkat</th>
                     <th scope="col">Tempat Tujuan</th>
                     <th scope="col">Tanggal Berangkat</th>
@@ -30,6 +31,7 @@
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $perjalanan->kendaraan->nama }}</td>
+                    <td>{{ $perjalanan->lama_perjalanan }} Hari</td>
                     <td>{{ $perjalanan->tempat_berangkat }}</td>
                     <td>{{ $perjalanan->tempat_tujuan }}</td>
                     <td>{{ $perjalanan->tanggal_berangkat }}</td>
