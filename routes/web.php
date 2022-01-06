@@ -30,6 +30,7 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
+    // Data Dasar
     Route::get('/datapegawai',[PegawaiController::class, 'data'])->name('pegawai-data');
     Route::get('/dataperjalanan',[PerjalananController::class, 'data'])->name('perjalanan-data');
     Route::get('/datasurat',[SuratController::class, 'data'])->name('surat-data');
@@ -41,6 +42,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/perjalanan', PerjalananController::class)->except('show');
     Route::resource('/surat',SuratController::class)->except('show');
 
+    // Data Tambahan
     Route::get('/datajabatan',[JabatanController::class, 'data'])->name('jabatan-data');
     Route::get('/datakendaraan',[KendaraanController::class, 'data'])->name('kendaraan-data');
     Route::get('/datapangkat',[PangkatController::class, 'data'])->name('pangkat-data');

@@ -58,6 +58,6 @@ class LoginController extends Controller
             return redirect()->intended('/home');
         }
 
-        return redirect('/login')->with('errors','Login Failed!');
+        return back()->with('fail','Login Failed!');
     }
 }

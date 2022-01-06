@@ -39,9 +39,9 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    @if(session('errors'))
+                                    @if(session('fail'))
                                         <div class="alert alert-danger container container-fluid col-lg-12" role="alert">
-                                            {{ session('danger') }}
+                                            {{ session('fail') }}
                                         </div>
                                     @endif
                                     <form class="user" method="post" action="{{ route('login') }}">

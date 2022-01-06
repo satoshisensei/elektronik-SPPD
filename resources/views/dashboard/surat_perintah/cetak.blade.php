@@ -151,13 +151,13 @@
                 <th scope="row">Angkutan yang digunakan</th>
                 <td>{{ $surats[0]->perjalanan->kendaraan->nama }}</td>
             </tr>
-            <tr>
+            {{-- <tr>
                 <th scope="row">8</th>
                 <th scope="row">Pengikut : Nama</th>
                 <th scope="row">Umur dan Hubungan Kekeluargaan</th>
-            </tr>
+            </tr> --}}
             <tr>
-                <th scope="row">9</th>
+                <th scope="row">8</th>
                 <th scope="row">Instansi</th>
                 <td>Dinas Perpustakaan Kota Samarinda</td>
             </tr>
