@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Kendaraan;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Perjalanan extends Model
 {
@@ -12,9 +14,20 @@ class Perjalanan extends Model
     protected $table = 'perjalanans';
     protected $guarded = 'id';
     protected $fillable = [
+        'kendaraan_id',
         'tempat_berangkat',
         'tempat_tujuan',
         'tanggal_berangkat',
         'tanggal_kembali'
     ];
+
+    /**
+     * Get the kendaraan that owns the Perjalanan
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function kendaraan(): BelongsTo
+    {
+        return $this->belongsTo(Kendaraan::class);
+    }
 }

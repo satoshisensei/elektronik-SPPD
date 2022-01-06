@@ -14,6 +14,7 @@ class SuratFactory extends Factory
     public function definition()
     {
         return [
+            'user_id' => mt_rand(1,5),
             'pegawai_id' => mt_rand(1,50),
             'perjalanan_id' => mt_rand(1,50),
             'nomor' => $this->faker->numerify('090'.'/'.'###'.'/'.'100.19'),

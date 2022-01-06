@@ -15,11 +15,22 @@ class Surat extends Model
     protected $table = 'surats';
     protected $guarded = 'id';
     protected $fillable = [
+        'user_id',
         'pegawai_id',
         'perjalanan_id',
         'nomor',
         'uraian'
     ];
+
+    /**
+     * Get the user that owns the Surat
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 
     /**
      * Get the pegawai that owns the Surat

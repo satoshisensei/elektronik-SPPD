@@ -149,7 +149,7 @@
             <tr>
                 <th scope="row">7</th>
                 <th scope="row">Angkutan yang digunakan</th>
-                <td></td>
+                <td>{{ $surats[0]->perjalanan->kendaraan->nama }}</td>
             </tr>
             <tr>
                 <th scope="row">8</th>

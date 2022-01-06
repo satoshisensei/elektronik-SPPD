@@ -15,6 +15,10 @@ class KendaraanSeeder extends Seeder
     public function run()
     {
         Kendaraan::create([
+            'nama' => 'Dinas / Umum'
+        ]);
+
+        Kendaraan::create([
             'nama' => 'Mobil Pribadi'
         ]);
 

@@ -13,6 +13,23 @@
                         @csrf
                         <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                         <div class="mb-3">
+                            <label for="kendaraan_id" class="form-label">Kendaraan</label>
+                            <select class="form-select" name="kendaraan_id">
+                                @foreach($kendaraans as $kendaraan)
+                                    @if(old('kendaraan_id',$perjalanans[0]->kendaraan_id) == $kendaraan->id)
+                                        <option value="{{ $kendaraan->id }}" selected>{{ $kendaraan->nama }}</option>
+                                    @else
+                                        <option value="{{ $kendaraan->id }}">{{ $kendaraan->nama }}</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                            @error('kendaraan_id')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
                             <label for="tempat_berangkat" class="form-label">Tempat Berangkat</label>
                             <input type="text" class="form-control @error('tempat_berangkat')
                                 is-invalid

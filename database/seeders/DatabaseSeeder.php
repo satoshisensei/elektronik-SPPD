@@ -9,6 +9,7 @@ use Database\Seeders\JabatanSeeder;
 use Database\Seeders\PangkatSeeder;
 use Database\Seeders\PegawaiSeeder;
 use Database\Seeders\PerjalananSeeder;
+use Database\Seeders\KendaraanSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
             PangkatSeeder::class,
             PegawaiSeeder::class,
             PerjalananSeeder::class,
+            KendaraanSeeder::class,
             SuratSeeder::class,
         ]);
     }

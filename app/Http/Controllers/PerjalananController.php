@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pegawai;
+use App\Models\Kendaraan;
 use App\Models\Perjalanan;
 use Illuminate\Http\Request;
 use Yajra\Datatables\Datatables;
@@ -29,7 +30,8 @@ class PerjalananController extends Controller
     public function create()
     {
         return view('dashboard.perjalanan_dinas.create',[
-            'pegawais' => Pegawai::get()->all()
+            'pegawais' => Pegawai::get()->all(),
+            'kendaraans' => Kendaraan::get()
         ]);
     }
 
@@ -42,6 +44,7 @@ class PerjalananController extends Controller
     public function store(Request $request)
     {
         $validate = $request->validate([
+            'kendaraan_id' => 'required',
             'tempat_berangkat' => 'required|max:255',
             'tempat_tujuan' => 'required|max:255',
             'tanggal_berangkat' => 'required',
@@ -72,7 +75,8 @@ class PerjalananController extends Controller
     public function edit(Perjalanan $perjalanan)
     {
         return view('dashboard.perjalanan_dinas.edit',[
-            'perjalanans' => Perjalanan::find($perjalanan)
+            'perjalanans' => Perjalanan::find($perjalanan),
+            'kendaraans' => Kendaraan::get()
         ]);
     }
 
@@ -91,6 +95,11 @@ class PerjalananController extends Controller
             'tanggal_berangkat' => 'required',
             'tanggal_kembali' => 'required'
         ];
+
+        if($perjalanan->kendaraan != $request->kendaraan)
+        {
+            $rules['kendaraan_id'] = 'required';
+        }
 
         $validate = $request->validate($rules);
 

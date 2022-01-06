@@ -17,6 +17,7 @@
                 <thead>
                 <tr>
                     <th scope="col">No</th>
+                    <th scope="col">Kendaraan</th>
                     <th scope="col">Tempat Berangkat</th>
                     <th scope="col">Tempat Tujuan</th>
                     <th scope="col">Tanggal Berangkat</th>
@@ -28,6 +29,7 @@
                 @foreach ($perjalanans as $perjalanan)
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
+                    <td>{{ $perjalanan->kendaraan->nama }}</td>
                     <td>{{ $perjalanan->tempat_berangkat }}</td>
                     <td>{{ $perjalanan->tempat_tujuan }}</td>
                     <td>{{ $perjalanan->tanggal_berangkat }}</td>
@@ -54,6 +56,7 @@
                 serverSide: true,
                 ajax: '{!! route('perjalanan-data') !!}',
                 columns: [
+                    { data: 'kendaraan', name: 'kendaraan' },
                     { data: 'tempat_berangkat', name: 'tempat_berangkat' },
                     { data: 'tempat_tujuan', name: 'tempat_tujuan' },
                     { data: 'tanggal_berangkat', name: 'tanggal_berangkat' },

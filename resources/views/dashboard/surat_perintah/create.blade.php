@@ -22,12 +22,12 @@
                                     @endif
                                 @endforeach
                             </select>
-                            @error('perjalanan_id')
+                            @error('pegawai_id')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                             @enderror
-                        </div
+                        </div>
                         <div class="mb-3">
                             <label for="perjalanan_id" class="form-label">Tempat Tujuan Perjalanan Dinas</label>
                             <select class="form-select" name="perjalanan_id">
@@ -44,7 +44,7 @@
                                     {{ $message }}
                                 </div>
                             @enderror
-                        </div
+                        </div>
                         <div class="mb-3">
                             <label for="nomor" class="form-label">Nomor SPPD</label>
                             <input type="text" class="form-control @error('nomor')

@@ -15,6 +15,7 @@ class CreateSuratsTable extends Migration
     {
         Schema::create('surats', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->foreignId('pegawai_id');
             $table->foreignId('perjalanan_id');
             $table->string('nomor');

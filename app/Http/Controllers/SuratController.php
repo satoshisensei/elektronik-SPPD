@@ -52,6 +52,8 @@ class SuratController extends Controller
             'uraian' => 'required|max:255'
         ]);
 
+        $validate['user_id'] = auth()->user()->id;
+
         Surat::create($validate);
         return redirect('/surat')->with('success','Added Successfully!');
     }
@@ -104,6 +106,7 @@ class SuratController extends Controller
             $rules['perjalanan_id'] = 'required';
         }
 
+        $validate['user_id'] = auth()->user()->id;
         $validate = $request->validate($rules);
 
         Surat::where('id',$surat->id)->update($validate);
