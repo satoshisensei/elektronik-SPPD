@@ -57,7 +57,7 @@
         }
         .kanant{
         padding-left: 300px;
-        padding-bottom: 50px;
+        padding-bottom: 25px;
         }
     </style>
 </head>
@@ -151,11 +151,17 @@
                 <th scope="row">Angkutan yang digunakan</th>
                 <td>{{ $surats[0]->perjalanan->kendaraan->nama }}</td>
             </tr>
-            {{-- <tr>
+            <tr>
                 <th scope="row">8</th>
-                <th scope="row">Pengikut : Nama</th>
-                <th scope="row">Umur dan Hubungan Kekeluargaan</th>
-            </tr> --}}
+                <th scope="row">
+                Pengikut : Nama <br>
+                {{ $surats[0]->pegawai->pengikut->nama }}
+                </th>
+                <th scope="row">
+                Umur / Hubungan Kekeluargaan <br>
+                {{ $surats[0]->pegawai->pengikut->umur }} / {{ $surats[0]->pegawai->pengikut->hubungan }}
+                </th>
+            </tr>
             <tr>
                 <th scope="row">8</th>
                 <th scope="row">Instansi</th>
@@ -165,10 +171,10 @@
     </div>
     <div class="container">
         <div class="d-flex justify-content-end">
-            <h2 class="h5">Dikeluarkan di : SAMARINDA</h2>
+            <p class="text h6">Dikeluarkan di : SAMARINDA</p>
         </div>
         <div class="d-flex justify-content-end">
-            <h2 class="h5">Pada Tanggal : {{ date('d-m-Y') }}</h2>
+            <p class="text h6">Pada Tanggal : {{ date('d-m-Y') }}</p>
         </div>
     </div>
     <div class="container container-fluid">
