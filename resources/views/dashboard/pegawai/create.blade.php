@@ -37,7 +37,7 @@
                             <label for="pangkat_id" class="form-label">Pangkat : </label>
                             <select class="form-select" name="pangkat_id">
                                 @foreach($pangkats as $pangkat)
-                                    @if(old('pangkat_id') == $pangkat_id)
+                                    @if(old('pangkat_id') == $pangkat->id)
                                         <option value="{{ $pangkat->id }}" selected>{{ $pangkat->golongan }}/{{ $pangkat->ruang }}</option>
                                     @else
                                         <option value="{{ $pangkat->id }}">{{ $pangkat->golongan }}/{{ $pangkat->ruang }}</option>
@@ -54,7 +54,7 @@
                             <label for="jabatan_id" class="form-label">Jabatan</label>
                             <select class="form-select" name="jabatan_id">
                                 @foreach($jabatans as $jabatan)
-                                    @if(old('jabatan_id') == $jabatan_id)
+                                    @if(old('jabatan_id') == $jabatan->id)
                                         <option value="{{ $jabatan->id }}" selected>{{ $jabatan->nama }}</option>
                                     @else
                                         <option value="{{ $jabatan->id }}">{{ $jabatan->nama }}</option>
@@ -67,16 +67,18 @@
                                 </div>
                             @enderror
                         </div>
-                        {{-- <div class="mb-3">
-                            <label for="alamat" class="form-label">Alamat</label>
-                            <input id="alamat" type="hidden" name="alamat" value="{{ old('alamat') }}">
-                            <trix-editor input="alamat"></trix-editor>
-                            @error('alamat')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div> --}}
+                        <div class="mb-3">
+                            <label for="pengikut_id" class="form-label">Pengikut : </label>
+                            <select class="form-select" name="pengikut_id">
+                                @foreach($pengikuts as $pengikut)
+                                    @if(old('pengikut_id') == $pengikut->id)
+                                        <option value="{{ $pengikut->id }}" selected>{{ $pengikut->nama }}</option>
+                                    @else
+                                        <option value="{{ $pengikut->id }}">{{ $pengikut->nama }}</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="d-flex justify-content-center">
                             <a href="{{ url()->previous() }}" class="btn btn-primary me-md-2">Kembali</a>
                             <button type="submit" class="btn btn-success">Submit</button>

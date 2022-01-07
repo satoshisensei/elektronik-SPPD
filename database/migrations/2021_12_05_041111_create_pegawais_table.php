@@ -17,6 +17,7 @@ class CreatePegawaisTable extends Migration
             $table->id();
             $table->foreignId('pangkat_id');
             $table->foreignId('jabatan_id');
+            $table->foreignId('pengikut_id')->nullable();
             $table->string('nama');
             $table->string('nip')->unique();
             $table->timestamps();

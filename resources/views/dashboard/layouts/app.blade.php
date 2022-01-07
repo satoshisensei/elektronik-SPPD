@@ -95,7 +95,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            @can('admin')
             <!-- Heading -->
             <div class="sidebar-heading">
                 Data Tambahan
@@ -107,6 +106,8 @@
                     <i class="fas fa-fw fa-share-square"></i>
                     <span>Pengikut</span></a>
             </li>
+
+            @can('admin')
 
             <!-- Nav Item - Kendaraan Menu -->
             <li class="nav-item">
@@ -129,9 +130,9 @@
                     <span>Jabatan</span></a>
             </li>
 
+            @endcan
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-            @endcan
 
 
         </ul>

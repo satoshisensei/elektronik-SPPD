@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Jabatan;
 use App\Models\Pangkat;
 use App\Models\Pegawai;
+use App\Models\Pengikut;
 use Illuminate\Http\Request;
 use Yajra\Datatables\Datatables;
 
@@ -32,6 +33,7 @@ class PegawaiController extends Controller
         return view('dashboard.pegawai.create',[
             'pangkats' => Pangkat::get()->all(),
             'jabatans' => Jabatan::get()->all(),
+            'pengikuts' => Pengikut::get()->all()
         ]);
     }
 
@@ -43,12 +45,23 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
+
         $validate = $request->validate([
             'pangkat_id' => 'required',
             'jabatan_id' => 'required',
             'nama' => 'required',
             'nip' => 'required'
         ]);
+
+        if(!isset($request->pengikut))
+        {
+            $validate['pengikut_id'] = 'nullable';
+        }
+
+        if(isset($request->pengikut))
+        {
+            $validate['pengikut_id'] = 'required';
+        }
 
         Pegawai::create($validate);
         return redirect('/pegawai')->with('success','Added Successfully!');
@@ -77,6 +90,7 @@ class PegawaiController extends Controller
             'pegawais' => Pegawai::find($pegawai),
             'pangkats' => Pangkat::get()->all(),
             'jabatans' => Jabatan::get()->all(),
+            'pengikuts' => Pengikut::get()->all()
         ]);
     }
 
@@ -89,12 +103,23 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, Pegawai $pegawai)
     {
+        // return $request;
         $rules = [
             'pangkat_id' => 'required',
             'jabatan_id' => 'required',
             'nama' => 'required',
             'nip' => 'required'
         ];
+
+        if(!isset($request->pengikut) || !$pegawai->pengikut)
+        {
+            $rules['pengikut_id'] = 'nullable';
+        }
+
+        if(isset($request->pengikut) == $pegawai->pengikut)
+        {
+            $validate['pengikut_id'] = 'required';
+        }
 
         $validate = $request->validate($rules);
         Pegawai::where('id',$pegawai->id)->update($validate);

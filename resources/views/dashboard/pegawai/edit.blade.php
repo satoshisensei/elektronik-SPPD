@@ -68,16 +68,18 @@
                                 </div>
                             @enderror
                         </div>
-                        {{-- <div class="mb-3">
-                            <label for="alamat" class="form-label">Alamat</label>
-                            <input id="alamat" type="hidden" name="alamat" value="{{ old('alamat',$pegawais[0]->alamat) }}">
-                            <trix-editor input="alamat"></trix-editor>
-                            @error('alamat')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div> --}}
+                        <div class="mb-3">
+                            <label for="pengikut_id" class="form-label">Pengikut : </label>
+                            <select class="form-select" name="pengikut_id">
+                                @foreach($pengikuts as $pengikut)
+                                    @if(old('pengikut_id') == $pengikut->id)
+                                        <option value="{{ $pengikut->id }}" selected>{{ $pengikut->nama }}</option>
+                                    @else
+                                        <option value="{{ $pengikut->id }}">{{ $pengikut->nama }}</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="d-flex justify-content-center">
                             <a href="{{ url()->previous() }}" class="btn btn-primary me-md-2">Kembali</a>
                             <button type="submit" class="btn btn-success">Submit</button>

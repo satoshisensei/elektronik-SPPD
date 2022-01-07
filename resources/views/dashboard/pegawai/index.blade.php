@@ -18,6 +18,7 @@
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Nip</th>
+                    <th scope="col">Pengikut</th>
                     <th scope="col">Aksi</th>
                 </tr>
                 </thead>
@@ -27,6 +28,7 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $pegawai->nama }}</td>
                     <td>{{ $pegawai->nip }}</td>
+                    <td>{{ $pegawai->pengikut->nama }}</td>
                     <td>
                         <a href="/pegawai/{{ $pegawai->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
                         <form action="/pegawai/{{ $pegawai->id }}" method="post" class="d-inline">
@@ -51,6 +53,7 @@
                 columns: [
                     { data: 'nama', name: 'nama' },
                     { data: 'nip', name: 'nip' },
+                    { data: 'pengikut', name: 'pengikut' },
                 ]
             });
         });
