@@ -15,7 +15,7 @@ class PengikutFactory extends Factory
     {
         return [
             'nama' => $this->faker->name(),
-            'umur' => $this->faker->numerify('##'),
+            'umur' => $this->faker->numberBetween(15,55),
         ];
     }
 }
