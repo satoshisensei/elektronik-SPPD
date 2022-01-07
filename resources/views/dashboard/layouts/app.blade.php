@@ -206,7 +206,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            {{-- <footer class="sticky-footer bg-white">
+            {{-- <footer class="footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Dinas Perpustakaan Kota Samarinda 2021</span>
@@ -239,11 +239,11 @@
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
                     <form action="{{ route('logout') }}" method="post">
                     @method('post')
                     @csrf
-                    <button class="btn btn-success" type="submit"><i class="fas fa-sm fa-fw fa-user-alt-slash text-white-50"></i> Logout</button>
+                    <button class="btn btn-success" type="submit"><i class="fas fa-sm fa-fw fa-sign-out-alt text-white-50"></i> Logout</button>
                     </form>
                 </div>
             </div>
