@@ -46,10 +46,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/datajabatan',[JabatanController::class, 'data'])->name('jabatan-data');
     Route::get('/datakendaraan',[KendaraanController::class, 'data'])->name('kendaraan-data');
     Route::get('/datapangkat',[PangkatController::class, 'data'])->name('pangkat-data');
-    Route::get('/datapengikut',[PengikutController::class, 'data'])->name('pengikut-data');
+    // Route::get('/datapengikut',[PengikutController::class, 'data'])->name('pengikut-data');
 
     Route::resource('/jabatan',JabatanController::class)->except('show');
     Route::resource('/kendaraan',KendaraanController::class)->except('show');
-    Route::resource('/pangkat',PangkatController::class)->except('show');
+    // Route::resource('/pangkat',PangkatController::class)->except('show');
     Route::resource('/pengikut',PengikutController::class)->except('show');
 });

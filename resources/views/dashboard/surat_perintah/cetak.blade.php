@@ -151,7 +151,7 @@
                 <th scope="row">Angkutan yang digunakan</th>
                 <td>{{ $surats[0]->perjalanan->kendaraan->nama }}</td>
             </tr>
-            <tr>
+            {{-- <tr>
                 <th scope="row">8</th>
                 <th scope="row">
                 Pengikut : Nama <br>
@@ -161,7 +161,7 @@
                 Umur / Hubungan Kekeluargaan <br>
                 {{ $surats[0]->pegawai->pengikut->umur }} / {{ $surats[0]->pegawai->pengikut->hubungan }}
                 </th>
-            </tr>
+            </tr> --}}
             <tr>
                 <th scope="row">8</th>
                 <th scope="row">Instansi</th>

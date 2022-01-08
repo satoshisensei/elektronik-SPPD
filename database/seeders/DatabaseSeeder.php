@@ -25,11 +25,11 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             JabatanSeeder::class,
             PangkatSeeder::class,
-            PengikutSeeder::class,
-            PegawaiSeeder::class,
-            PerjalananSeeder::class,
+            // PengikutSeeder::class,
+            // PegawaiSeeder::class,
+            // PerjalananSeeder::class,
+            // SuratSeeder::class,
             KendaraanSeeder::class,
-            SuratSeeder::class,
         ]);
     }
 }
