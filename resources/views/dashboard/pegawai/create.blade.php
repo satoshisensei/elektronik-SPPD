@@ -67,7 +67,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label for="pengikut_id" class="form-label">Pengikut : </label>
                             <select class="form-select" name="pengikut_id">
                                 @foreach($pengikuts as $pengikut)
@@ -78,7 +78,7 @@
                                     @endif
                                 @endforeach
                             </select>
-                        </div>
+                        </div> --}}
                         <div class="d-flex justify-content-center">
                             <a href="{{ url()->previous() }}" class="btn btn-primary me-md-2">Kembali</a>
                             <button type="submit" class="btn btn-success">Submit</button>
