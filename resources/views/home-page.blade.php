@@ -109,7 +109,7 @@
                 <!-- Footer Location-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Location</h4>
-                    <i class="fas fa-search-location"></i>
+                    <i class="fas fa-search-location fa-5x"></i>
                     <p class="lead mb-0">
                         Jl. Kesuma Bangsa No. 5
                         <br />
