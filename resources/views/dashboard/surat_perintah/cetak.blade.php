@@ -113,8 +113,8 @@
                 b. Jabatan
                 </th>
                 <td>
-                a. {{ $pangkats[0]->golongan }}/{{ $pangkats[0]->ruang }} <br>
-                b. {{ $jabatans[0]->nama }}
+                a. {{ $surats[0]->pegawai->pangkat->golongan }}/{{ $surats[0]->pegawai->pangkat->ruang }} <br>
+                b. {{ $surats[0]->pegawai->jabatan->nama }}
                 </td>
             </tr>
             <tr>
