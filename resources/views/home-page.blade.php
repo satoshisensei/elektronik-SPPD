@@ -51,7 +51,7 @@
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Masthead Subheading-->
@@ -66,7 +66,7 @@
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
             <!-- About Section Content-->
@@ -84,7 +84,7 @@
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-icon"><i class="fas fa-circle"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
             <!-- About Section Content-->
@@ -109,7 +109,7 @@
                 <!-- Footer Location-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Location</h4>
-                    <i class="mdi mdi-map"></i>
+                    <i class="fas fa-search-location"></i>
                     <p class="lead mb-0">
                         Jl. Kesuma Bangsa No. 5
                         <br />

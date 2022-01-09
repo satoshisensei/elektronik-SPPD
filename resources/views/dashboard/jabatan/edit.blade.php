@@ -16,7 +16,7 @@
                             <label for="nama" class="form-label">Nama</label>
                             <input type="text" class="form-control @error('nama')
                                 is-invalid
-                            @enderror" id="nama" name="nama" placeholder="Enter Transport..." autofocus required value="{{ old('nama',$jabatans[0]->nama) }}">
+                            @enderror" id="nama" name="nama" placeholder="Enter Jabatan..." autofocus required value="{{ old('nama',$jabatans[0]->nama) }}">
                             @error('nama')
                                 <div class="invalid-feedback">
                                     {{ $message }}
