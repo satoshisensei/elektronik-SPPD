@@ -27,6 +27,14 @@ class KendaraanSeeder extends Seeder
         ]);
 
         Kendaraan::create([
+            'nama' => 'Bus Umum'
+        ]);
+
+        Kendaraan::create([
+            'nama' => 'Bus Dinas'
+        ]);
+
+        Kendaraan::create([
             'nama' => 'Kereta Rel Listrik'
         ]);
 
