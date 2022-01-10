@@ -50,6 +50,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/jabatan',JabatanController::class)->except('show');
     Route::resource('/kendaraan',KendaraanController::class)->except('show');
-    // Route::resource('/pangkat',PangkatController::class)->except('show');
-    Route::resource('/pengikut',PengikutController::class)->except('show');
+    Route::resource('/pangkat',PangkatController::class)->except('show');
+    // Route::resource('/pengikut',PengikutController::class)->except('show');
 });
