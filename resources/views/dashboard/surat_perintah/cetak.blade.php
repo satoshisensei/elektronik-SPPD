@@ -85,7 +85,7 @@
             <h2 class="h4 text-bold text-decoration-underline text-uppercase">Surat Perintah Perjalanan Dinas</h2>
         </div>
         <div class="d-flex justify-content-center">
-            <h2 class="h5">Nomor : {{ $surats[0]->nomor }}</h2>
+            <h2 class="h5">Nomor : {!! $surats[0]->nomor !!}</h2>
         </div>
     </div>
     <br>
@@ -101,9 +101,9 @@
                 <th scope="row">2</th>
                 <th scope="row">Nama/NIP Pegawai yang diperintahkan</th>
                 <td>
-                {{ $surats[0]->pegawai->nama }}
+                {!! $surats[0]->pegawai->nama !!}
                 <br>
-                NIP. {{ $surats[0]->pegawai->nip }}
+                NIP. {!! $surats[0]->pegawai->nip !!}
                 </td>
             </tr>
             <tr>
@@ -113,8 +113,8 @@
                 b. Jabatan
                 </th>
                 <td>
-                a. {{ $surats[0]->pegawai->pangkat->golongan }}/{{ $surats[0]->pegawai->pangkat->ruang }} <br>
-                b. {{ $surats[0]->pegawai->jabatan->nama }}
+                a. {!! $surats[0]->pegawai->pangkat->golongan !!}/{!! $surats[0]->pegawai->pangkat->ruang !!} <br>
+                b. {!! $surats[0]->pegawai->jabatan->nama !!}
                 </td>
             </tr>
             <tr>
@@ -129,8 +129,8 @@
                 b. Tempat Tujuan
                 </th>
                 <td>
-                a. {{ $surats[0]->perjalanan->tempat_berangkat }} <br>
-                b. {{ $surats[0]->perjalanan->tempat_tujuan }}
+                a. {!! $surats[0]->perjalanan->tempat_berangkat !!} <br>
+                b. {!! $surats[0]->perjalanan->tempat_tujuan !!}
                 </td>
             </tr>
             <tr>
@@ -141,15 +141,15 @@
                 c. Tanggal Harus Kembali
                 </th>
                 <td>
-                a. {{ $surats[0]->perjalanan->lama_perjalanan }} Hari<br>
-                b. {{ $surats[0]->perjalanan->tanggal_berangkat }} <br>
-                c. {{ $surats[0]->perjalanan->tanggal_kembali }}
+                a. {!! $surats[0]->perjalanan->lama_perjalanan !!} Hari<br>
+                b. {!! $surats[0]->perjalanan->tanggal_berangkat !!} <br>
+                c. {!! $surats[0]->perjalanan->tanggal_kembali !!}
                 </td>
             </tr>
             <tr>
                 <th scope="row">7</th>
                 <th scope="row">Angkutan yang digunakan</th>
-                <td>{{ $surats[0]->perjalanan->kendaraan->nama }}</td>
+                <td>{!! $surats[0]->perjalanan->kendaraan->nama !!}</td>
             </tr>
             {{-- <tr>
                 <th scope="row">8</th>
