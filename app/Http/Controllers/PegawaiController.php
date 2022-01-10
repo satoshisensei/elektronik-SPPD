@@ -123,7 +123,7 @@ class PegawaiController extends Controller
 
         $validate = $request->validate($rules);
         Pegawai::where('id',$pegawai->id)->update($validate);
-        return redirect('/surat')->with('success','Updated Successfully!');
+        return redirect('/pegawai')->with('success','Updated Successfully!');
     }
 
     /**
