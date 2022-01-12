@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cetak SPPD</title>
+    <title>Show SPPD</title>
     <!-- Favicon icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon-32x32.png') }}">
@@ -71,6 +71,7 @@
                     <font size="6"><b>{{ $instansis[0]->nama }}</b></font><br>
                     <font size="2">Alamat : {{ $instansis[0]->alamat }} Telp/Fax {{ $instansis[0]->no_hp }} Email: {{ $instansis[0]->email }}</font><br>
                     <font size="3">{{ $instansis[0]->domisili }} KODE POS:{{ $instansis[0]->kode_pos }}</font>
+
                 </td>
             </tr>
             <tr>
@@ -221,8 +222,5 @@
     <script src="{{ asset('dist/js/custom.min.js') }}"></script>
     <!--This page JavaScript -->
     {{-- <script src="/dist/js/pages/dashboards/dashboard1.js"></script> --}}
-    <script type="text/javascript">
-        window.print();
-    </script>
 </body>
 </html>

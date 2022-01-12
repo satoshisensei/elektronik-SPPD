@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\InstansiSeeder;
 use Database\Seeders\SuratSeeder;
 use Database\Seeders\JabatanSeeder;
 use Database\Seeders\PangkatSeeder;
@@ -24,6 +25,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
+            InstansiSeeder::class,
             JabatanSeeder::class,
             PangkatSeeder::class,
             // PengikutSeeder::class,

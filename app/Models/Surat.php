@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Status;
 use App\Models\Pegawai;
+use App\Models\Instansi;
 use App\Models\Perjalanan;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -82,5 +83,15 @@ class Surat extends Model
     public function status(): BelongsTo
     {
         return $this->belongsTo(Status::class);
+    }
+
+    /**
+     * Get the instansi that owns the Surat
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function instansi(): BelongsTo
+    {
+        return $this->belongsTo(Instansi::class);
     }
 }

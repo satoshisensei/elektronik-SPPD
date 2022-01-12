@@ -92,6 +92,7 @@
                 </a>
             </li>
 
+
             @can('admin')
 
             <!-- Divider -->
@@ -102,12 +103,12 @@
                 Data Tambahan
             </div>
 
-            <!-- Nav Item - Kendaraan Menu -->
-            {{-- <li class="nav-item">
-                <a class="nav-link" href="/pengikut">
-                    <i class="fas fa-fw fa-share-square"></i>
-                    <span>Pengikut</span></a>
-            </li> --}}
+            <!-- Nav Item - Instansi Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="/instansi">
+                    <i class="fas fa-fw fa-industry"></i>
+                    <span>Instansi</span></a>
+            </li>
 
             <!-- Nav Item - Kendaraan Menu -->
             <li class="nav-item">
@@ -278,9 +279,22 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/b-2.1.1/b-html5-2.1.1/b-print-2.1.1/sb-1.3.0/sp-1.4.0/datatables.min.js"></script>
     <script>
-        $(document).ready( function() {
-            $('#myTable').DataTable();
-        });
+    $(document).ready( function() {
+        $('#myTable').DataTable();
+    });
+
+    function previewImage(){
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+
+        imagePreview.style.display = 'block';
+
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+        OFReader.onload = function(oFREvent){
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
     </script>
 
 </body>

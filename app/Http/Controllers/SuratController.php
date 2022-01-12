@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 // use PDF;
-use App\Models\Status;
 use App\Models\Surat;
+use App\Models\Status;
 use App\Models\Jabatan;
 use App\Models\Pangkat;
 use App\Models\Pegawai;
+use App\Models\Instansi;
 use App\Models\Perjalanan;
 use Illuminate\Http\Request;
 use Yajra\Datatables\Datatables;
@@ -77,7 +78,12 @@ class SuratController extends Controller
      */
     public function show(Surat $surat)
     {
-        //
+        return view('dashboard.surat_perintah.show',[
+            'surats' => Surat::with(['pegawai','perjalanan'])->find($surat),
+            'pangkats' => Pangkat::get(),
+            'jabatans' => Jabatan::get(),
+            'instansis' => Instansi::get()
+        ]);
     }
 
     /**
@@ -154,9 +160,10 @@ class SuratController extends Controller
     public function cetakSurat()
     {
         return view('dashboard.surat_perintah.cetak',[
-            'surats' => Surat::with(['pegawai','perjalanan'])->get(),
+            'surats' => Surat::with(['pegawai','perjalanan','instansi'])->get(),
             'pangkats' => Pangkat::get(),
-            'jabatans' => Jabatan::get()
+            'jabatans' => Jabatan::get(),
+            'instansis' => Instansi::get()
         ]);
     }
 

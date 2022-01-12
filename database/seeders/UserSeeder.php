@@ -23,16 +23,5 @@ class UserSeeder extends Seeder
             'is_admin' => 1,
             'remember_token' => Str::random(10),
         ]);
-
-        User::create([
-            'name' => 'Deuwi Satriya Irawan',
-            'email' => 'satriai418@gmail.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('laravel08'),
-            'is_admin' => 0,
-            'remember_token' => Str::random(10),
-        ]);
-
-        User::factory(4)->create();
     }
 }

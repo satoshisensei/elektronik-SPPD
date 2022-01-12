@@ -35,9 +35,9 @@
                     <td>{!! $surat->uraian !!}</td>
                     <td>
                     @if($surat->status->status == 'Disetujui')
-                        <a href="/surat/cetak/{{ $surat->id }}" class="btn btn-secondary" target="_blank"><i class="fas fa-print"></i></a>|
+                        <a href="/surat/cetak/{{ $surat->id }}" class="btn btn-dark" target="_blank"><i class="fas fa-print"></i></a>|
                     @else
-                        <a class="btn btn-info" target="_blank"><i class="fas fa-clock"></i></a>|
+                        <a href="/surat/{{ $surat->id }}" class="btn btn-info" target="_blank"><i class="fas fa-eye"></i></a>|
                     @endif
                         {{-- <a href="/surat/pdf/{{ $surat->id }}" class="btn btn-dark" target="_blank"><i class="fas fa-file-pdf"></i></a>| --}}
                         <a href="/surat/{{ $surat->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
