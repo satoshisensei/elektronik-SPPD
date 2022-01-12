@@ -79,7 +79,7 @@
             <!-- Nav Item - Perjalanan Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/perjalanan">
-                    <i class="fas fa-fw fa-car-side"></i>
+                    <i class="fas fa-fw fa-plane-departure"></i>
                     <span>Perjalanan Dinas</span>
                 </a>
             </li>

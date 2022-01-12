@@ -14,6 +14,7 @@ class PerjalananFactory extends Factory
     public function definition()
     {
         return [
+            'user_id' => mt_rand(1,5),
             'kendaraan_id' => mt_rand(1,6),
             'lama_perjalanan' => $this->faker->numerify('##'),
             'tempat_tujuan' => $this->faker->city(),

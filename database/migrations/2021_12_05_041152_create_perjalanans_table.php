@@ -15,6 +15,7 @@ class CreatePerjalanansTable extends Migration
     {
         Schema::create('perjalanans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->foreignId('kendaraan_id');
             $table->string('lama_perjalanan');
             $table->string('tempat_berangkat')->default('Samarinda');

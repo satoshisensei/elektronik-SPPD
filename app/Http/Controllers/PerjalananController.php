@@ -18,7 +18,7 @@ class PerjalananController extends Controller
     public function index()
     {
         return view('dashboard.perjalanan_dinas.index',[
-            'perjalanans' => Perjalanan::latest()->get()
+            'perjalanans' => Perjalanan::latest()->get(),
         ]);
     }
 
@@ -51,6 +51,8 @@ class PerjalananController extends Controller
             'tanggal_berangkat' => 'required',
             'tanggal_kembali' => 'required'
         ]);
+
+        $validate['user_id'] = auth()->user()->id;
 
         Perjalanan::create($validate);
         return redirect('/perjalanan')->with('success','Added Successfully!');
@@ -104,6 +106,7 @@ class PerjalananController extends Controller
         }
 
         $validate = $request->validate($rules);
+        $validate['user_id'] = auth()->user()->id;
 
         Perjalanan::where('id',$perjalanan->id)->update($validate);
         return redirect('/perjalanan')->with('success','Updated Successfully!');

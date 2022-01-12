@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 // use PDF;
+use App\Models\Status;
 use App\Models\Surat;
 use App\Models\Jabatan;
 use App\Models\Pangkat;
@@ -21,7 +22,7 @@ class SuratController extends Controller
     public function index()
     {
         return view('dashboard.surat_perintah.index',[
-            'surats' => Surat::latest()->get()
+            'surats' => Surat::latest()->with(['pegawai','perjalanan','status'])->get()
         ]);
     }
 
@@ -34,7 +35,8 @@ class SuratController extends Controller
     {
         return view('dashboard.surat_perintah.create',[
             'pegawais' => Pegawai::get()->all(),
-            'perjalanans' => Perjalanan::get()->all()
+            'perjalanans' => Perjalanan::get()->all(),
+            'statuses' => Status::get()->all(),
         ]);
     }
 
@@ -52,6 +54,14 @@ class SuratController extends Controller
             'nomor' => 'required|max:255',
             'uraian' => 'required|max:255'
         ]);
+
+        if(!$request->status){
+            $validate['status_id'] = 1;
+        }
+
+        if($request->status){
+            $validate['status_id'] = 'required';
+        }
 
         $validate['user_id'] = auth()->user()->id;
 
@@ -81,7 +91,8 @@ class SuratController extends Controller
         return view('dashboard.surat_perintah.edit',[
             'surats' => Surat::find($surat),
             'pegawais' => Pegawai::get(),
-            'perjalanans' => Perjalanan::get()
+            'perjalanans' => Perjalanan::get(),
+            'statuses' => Status::get()->all(),
         ]);
     }
 
@@ -105,6 +116,14 @@ class SuratController extends Controller
 
         if($surat->perjalanan != $request->perjalanan){
             $rules['perjalanan_id'] = 'required';
+        }
+
+        if(!$surat->status != $request->status){
+            $rules['status_id'] = 1;
+        }
+
+        if($surat->status != $request->status){
+            $rules['status_id'] = 'required';
         }
 
         $validate['user_id'] = auth()->user()->id;

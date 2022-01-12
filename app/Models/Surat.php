@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Status;
 use App\Models\Pegawai;
 use App\Models\Perjalanan;
 use Illuminate\Database\Eloquent\Model;
@@ -18,6 +19,7 @@ class Surat extends Model
         'user_id',
         'pegawai_id',
         'perjalanan_id',
+        'status_id',
         'nomor',
         'uraian'
     ];
@@ -70,5 +72,15 @@ class Surat extends Model
     public function jabatan(): BelongsTo
     {
         return $this->belongsTo(Jabatan::class);
+    }
+
+    /**
+     * Get the status that owns the Surat
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function status(): BelongsTo
+    {
+        return $this->belongsTo(Status::class);
     }
 }

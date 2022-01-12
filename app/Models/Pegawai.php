@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Pengikut;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -41,12 +41,22 @@ class Pegawai extends Model
     }
 
     /**
-     * Get the pengikut that owns the Pegawai
+     * Get the user that owns the Pegawai
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function pengikut(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Pengikut::class);
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the perjalanan that owns the Pegawai
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function perjalanan(): BelongsTo
+    {
+        return $this->belongsTo(Perjalanan::class);
     }
 }

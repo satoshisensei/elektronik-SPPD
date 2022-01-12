@@ -14,6 +14,7 @@ class Perjalanan extends Model
     protected $table = 'perjalanans';
     protected $guarded = 'id';
     protected $fillable = [
+        'user_id',
         'kendaraan_id',
         'lama_perjalanan',
         'tempat_berangkat',

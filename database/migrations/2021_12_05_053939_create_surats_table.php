@@ -18,6 +18,7 @@ class CreateSuratsTable extends Migration
             $table->foreignId('user_id');
             $table->foreignId('pegawai_id');
             $table->foreignId('perjalanan_id');
+            $table->foreignId('status_id');
             $table->string('nomor');
             $table->string('uraian');
             $table->timestamps();

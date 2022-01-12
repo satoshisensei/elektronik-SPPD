@@ -19,7 +19,7 @@ class PegawaiController extends Controller
     public function index()
     {
         return view('dashboard.pegawai.index',[
-            'pegawais' => Pegawai::latest()->with(['pangkat','jabatan'])->get()
+            'pegawais' => Pegawai::latest()->with(['pangkat','jabatan'])->get(),
         ]);
     }
 
@@ -32,8 +32,7 @@ class PegawaiController extends Controller
     {
         return view('dashboard.pegawai.create',[
             'pangkats' => Pangkat::get()->all(),
-            'jabatans' => Jabatan::get()->all(),
-            'pengikuts' => Pengikut::get()->all()
+            'jabatans' => Jabatan::get()->all()
         ]);
     }
 
@@ -52,16 +51,6 @@ class PegawaiController extends Controller
             'nama' => 'required',
             'nip' => 'required'
         ]);
-
-        if(!isset($request->pengikut))
-        {
-            $validate['pengikut_id'] = 'nullable';
-        }
-
-        if(isset($request->pengikut))
-        {
-            $validate['pengikut_id'] = 'required';
-        }
 
         Pegawai::create($validate);
         return redirect('/pegawai')->with('success','Added Successfully!');
@@ -89,8 +78,7 @@ class PegawaiController extends Controller
         return view('dashboard.pegawai.edit',[
             'pegawais' => Pegawai::find($pegawai),
             'pangkats' => Pangkat::get()->all(),
-            'jabatans' => Jabatan::get()->all(),
-            'pengikuts' => Pengikut::get()->all()
+            'jabatans' => Jabatan::get()->all()
         ]);
     }
 
@@ -110,16 +98,6 @@ class PegawaiController extends Controller
             'nama' => 'required',
             'nip' => 'required'
         ];
-
-        if(!isset($request->pengikut) || !$pegawai->pengikut)
-        {
-            $rules['pengikut_id'] = 'nullable';
-        }
-
-        if(isset($request->pengikut) == $pegawai->pengikut)
-        {
-            $validate['pengikut_id'] = 'required';
-        }
 
         $validate = $request->validate($rules);
         Pegawai::where('id',$pegawai->id)->update($validate);

@@ -11,6 +11,7 @@ use Database\Seeders\PegawaiSeeder;
 use Database\Seeders\PengikutSeeder;
 use Database\Seeders\KendaraanSeeder;
 use Database\Seeders\PerjalananSeeder;
+use Database\Seeders\StatusSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,6 +31,7 @@ class DatabaseSeeder extends Seeder
             // PerjalananSeeder::class,
             // SuratSeeder::class,
             KendaraanSeeder::class,
+            StatusSeeder::class,
         ]);
     }
 }

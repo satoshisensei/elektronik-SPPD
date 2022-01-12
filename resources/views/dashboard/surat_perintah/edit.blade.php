@@ -68,6 +68,25 @@
                                 </div>
                             @enderror
                         </div>
+                        @can('admin')
+                        <div class="mb-3">
+                            <label for="status_id" class="form-label">Status Surat</label>
+                            <select class="form-select" name="status_id">
+                                @foreach($statuses as $status)
+                                    @if(old('status_id',$surats[0]->status_id) == $status->id)
+                                        <option value="{{ $status->id }}" selected>{{ $status->status }}</option>
+                                    @else
+                                        <option value="{{ $status->id }}">{{ $status->status }}</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                            @error('status_id')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        @endcan
                         <div class="d-flex justify-content-center">
                             <a href="{{ url()->previous() }}" class="btn btn-primary me-md-2">Kembali</a>
                             <button type="submit" class="btn btn-success">Submit</button>
