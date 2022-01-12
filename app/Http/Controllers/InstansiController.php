@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Instansi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Yajra\Datatables\Datatables;
 
 class InstansiController extends Controller
 {
@@ -132,5 +133,10 @@ class InstansiController extends Controller
         Instansi::destroy($instansi->id);
 
         return redirect('/instansi')->with('success','Deleted Successfully!');
+    }
+
+    public function data()
+    {
+        return Datatables::of(Instansi::query())->make(true);
     }
 }
