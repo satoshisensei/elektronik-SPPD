@@ -26,7 +26,7 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $kendaraan->nama }}</td>
                     <td>
-                        <a href="/kendaraan/{{ $kendaraan->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
+                        <a href="/kendaraan/{{ $kendaraan->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
                         <form action="/kendaraan/{{ $kendaraan->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf

@@ -26,7 +26,7 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $pangkat->golongan }}/{{ $pangkat->ruang }}</td>
                     <td>
-                        <a href="/pangkat/{{ $pangkat->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
+                        <a href="/pangkat/{{ $pangkat->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
                         <form action="/pangkat/{{ $pangkat->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf

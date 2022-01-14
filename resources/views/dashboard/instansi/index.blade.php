@@ -36,7 +36,7 @@
                     <td>{{ $instansi->domisili }}</td>
                     <td>
                         <a href="/instansi/{{ $instansi->id }}" class="btn btn-info"><i class="fas fa-eye"></i></a>|
-                        <a href="/instansi/{{ $instansi->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
+                        <a href="/instansi/{{ $instansi->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
                         <form action="/instansi/{{ $instansi->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf

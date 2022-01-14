@@ -37,7 +37,7 @@
                     <td>{{ $perjalanan->tanggal_berangkat }}</td>
                     <td>{{ $perjalanan->tanggal_kembali }}</td>
                     <td>
-                        <a href="/perjalanan/{{ $perjalanan->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
+                        <a href="/perjalanan/{{ $perjalanan->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
                         <form action="/perjalanan/{{ $perjalanan->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf

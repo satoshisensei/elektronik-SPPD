@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2022 at 06:24 AM
+-- Generation Time: Jan 12, 2022 at 11:23 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -61,7 +61,7 @@ CREATE TABLE `instansis` (
 --
 
 INSERT INTO `instansis` (`id`, `nama`, `alamat`, `no_hp`, `email`, `kode_pos`, `domisili`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'DINAS PERPUSTAKAAN', 'Jl. Kesuma Bangsa No. 5', '(0541)412777', 'dinpus.kotasamarinda@gmail.com', '75123', 'SAMARINDA (KALIMANTAN TIMUR)', NULL, '2022-01-12 13:22:23', '2022-01-12 13:22:23');
+(1, 'DINAS PERPUSTAKAAN', 'Jl. Kesuma Bangsa No. 5', '(0541)412777', 'dinpus.kotasamarinda@gmail.com', '75123', 'SAMARINDA (KALIMANTAN TIMUR)', 'instansi-images/ieybHQcYgZoJt0hFce8p6H7MkOnNbgcN2TISA7az.png', '2022-01-12 13:22:23', '2022-01-13 06:22:38');
 
 -- --------------------------------------------------------
 
@@ -328,7 +328,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator Perpustakaan', 'admin.perpustakaan@gmail.com', '2022-01-12 13:22:23', '$2y$10$DJZIPn0fv.cTb.cWM1qOIuZerJjcbL/6tZb39SqnTKvJnlkBvJMQS', 1, 'QDZ5ncippW', '2022-01-12 13:22:23', '2022-01-12 13:22:23');
+(1, 'Administrator Perpustakaan', 'admin.perpustakaan@gmail.com', '2022-01-12 13:22:23', '$2y$10$DJZIPn0fv.cTb.cWM1qOIuZerJjcbL/6tZb39SqnTKvJnlkBvJMQS', 1, 'uZbOxDwUb9i3pQRFUPuM3BpSyHXA2EggbzjTaHCUC9lgjlq7LA8u62tzJwON', '2022-01-12 13:22:23', '2022-01-12 13:22:23');
 
 --
 -- Indexes for dumped tables

@@ -31,7 +31,7 @@
                     <td>{{ $pengikut->umur }}</td>
                     <td>{{ $pengikut->hubungan }}</td>
                     <td>
-                        <a href="/pengikut/{{ $pengikut->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
+                        <a href="/pengikut/{{ $pengikut->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
                         <form action="/pengikut/{{ $pengikut->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf

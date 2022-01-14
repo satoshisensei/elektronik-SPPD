@@ -28,7 +28,7 @@
                     <td>{{ $pegawai->nama }}</td>
                     <td>{{ $pegawai->nip }}</td>
                     <td>
-                        <a href="/pegawai/{{ $pegawai->id }}/edit" class="btn btn-warning"><i class="fas fa-table"></i></a>|
+                        <a href="/pegawai/{{ $pegawai->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
                         <form action="/pegawai/{{ $pegawai->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
