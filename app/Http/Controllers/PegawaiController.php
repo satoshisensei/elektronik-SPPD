@@ -44,7 +44,6 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-
         $validate = $request->validate([
             'pangkat_id' => 'required',
             'jabatan_id' => 'required',
