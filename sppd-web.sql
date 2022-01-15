@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2022 at 11:23 PM
+-- Generation Time: Jan 15, 2022 at 03:44 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -61,7 +61,7 @@ CREATE TABLE `instansis` (
 --
 
 INSERT INTO `instansis` (`id`, `nama`, `alamat`, `no_hp`, `email`, `kode_pos`, `domisili`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'DINAS PERPUSTAKAAN', 'Jl. Kesuma Bangsa No. 5', '(0541)412777', 'dinpus.kotasamarinda@gmail.com', '75123', 'SAMARINDA (KALIMANTAN TIMUR)', 'instansi-images/ieybHQcYgZoJt0hFce8p6H7MkOnNbgcN2TISA7az.png', '2022-01-12 13:22:23', '2022-01-13 06:22:38');
+(1, 'DINAS PERPUSTAKAAN', 'Jl. Kesuma Bangsa No. 5', '(0541)412777', 'dinpus.kotasamarinda@gmail.com', '75123', 'SAMARINDA (KALIMANTAN TIMUR)', 'instansi-images/dwpqUuoTQ2UAI36cCJBnwYQn3LpPXRYFXuaOW6zq.png', '2022-01-15 10:34:07', '2022-01-15 10:43:47');
 
 -- --------------------------------------------------------
 
@@ -81,31 +81,31 @@ CREATE TABLE `jabatans` (
 --
 
 INSERT INTO `jabatans` (`id`, `nama`, `created_at`, `updated_at`) VALUES
-(1, 'Kepala Dinas', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(2, 'Sekretaris', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(3, 'Sub Bagian Umum dan Kepegawaian', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(4, 'Sub Bagian Program dan Keuangan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(5, 'Kabid. Layanan Automasi dan Kerjasama Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(6, 'Kabid. Pengembangan Koleksi, Pengolahan dan Konservasi Bahan Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(7, 'Kabid. Pengembangan Perpustakaan dan Pembudayaan Kegemaran Membaca', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(8, 'Kasi. Layanan Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(9, 'Kasi. Otomasi Perpustakaan dan Alih Media', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(10, 'Kasi. Kerjasama dan Promosi Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(11, 'Kasi. Pengembangan Koleksi', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(12, 'Kasi. Pengolahan Bahan Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(13, 'Kasi. Konservasi', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(14, 'Kasi. Pembinaan dan Pembudayaan Kegemaran Membaca', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(15, 'Kasi. Pembinaan dan Pengembangan Tenaga Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(16, 'Kasi. Pengembangan dan Pembudayaan Membaca', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(17, 'Staff. Layanan Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(18, 'Staff. Otomasi Perpustakaan dan Alih Media', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(19, 'Staff. Kerjasama dan Promosi Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(20, 'Staff. Pengembangan Koleksi', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(21, 'Staff. Pengolahan Bahan Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(22, 'Staff. Konservasi', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(23, 'Staff. Pembinaan dan Pembudayaan Kegemaran Membaca', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(24, 'Staff. Pembinaan dan Pengembangan Tenaga Perpustakaan', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(25, 'Staff. Pengembangan dan Pembudayaan Membaca', '2022-01-12 13:22:23', '2022-01-12 13:22:23');
+(1, 'Kepala Dinas', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(2, 'Sekretaris', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(3, 'Sub Bagian Umum dan Kepegawaian', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(4, 'Sub Bagian Program dan Keuangan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(5, 'Kabid. Layanan Automasi dan Kerjasama Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(6, 'Kabid. Pengembangan Koleksi, Pengolahan dan Konservasi Bahan Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(7, 'Kabid. Pengembangan Perpustakaan dan Pembudayaan Kegemaran Membaca', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(8, 'Kasi. Layanan Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(9, 'Kasi. Otomasi Perpustakaan dan Alih Media', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(10, 'Kasi. Kerjasama dan Promosi Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(11, 'Kasi. Pengembangan Koleksi', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(12, 'Kasi. Pengolahan Bahan Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(13, 'Kasi. Konservasi', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(14, 'Kasi. Pembinaan dan Pembudayaan Kegemaran Membaca', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(15, 'Kasi. Pembinaan dan Pengembangan Tenaga Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(16, 'Kasi. Pengembangan dan Pembudayaan Membaca', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(17, 'Staff. Layanan Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(18, 'Staff. Otomasi Perpustakaan dan Alih Media', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(19, 'Staff. Kerjasama dan Promosi Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(20, 'Staff. Pengembangan Koleksi', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(21, 'Staff. Pengolahan Bahan Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(22, 'Staff. Konservasi', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(23, 'Staff. Pembinaan dan Pembudayaan Kegemaran Membaca', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(24, 'Staff. Pembinaan dan Pengembangan Tenaga Perpustakaan', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(25, 'Staff. Pengembangan dan Pembudayaan Membaca', '2022-01-15 10:34:07', '2022-01-15 10:34:07');
 
 -- --------------------------------------------------------
 
@@ -125,14 +125,14 @@ CREATE TABLE `kendaraans` (
 --
 
 INSERT INTO `kendaraans` (`id`, `nama`, `created_at`, `updated_at`) VALUES
-(1, 'Dinas / Umum', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(2, 'Mobil Pribadi', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(3, 'Mobil Dinas', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(4, 'Bus Umum', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(5, 'Bus Dinas', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(6, 'Kereta Rel Listrik', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(7, 'Kapal Laut', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(8, 'Pesawat', '2022-01-12 13:22:23', '2022-01-12 13:22:23');
+(1, 'Dinas / Umum', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(2, 'Mobil Pribadi', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(3, 'Mobil Dinas', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(4, 'Bus Umum', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(5, 'Bus Dinas', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(6, 'Kereta Rel Listrik', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(7, 'Kapal Laut', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(8, 'Pesawat', '2022-01-15 10:34:07', '2022-01-15 10:34:07');
 
 -- --------------------------------------------------------
 
@@ -183,22 +183,22 @@ CREATE TABLE `pangkats` (
 --
 
 INSERT INTO `pangkats` (`id`, `golongan`, `ruang`, `created_at`, `updated_at`) VALUES
-(1, 'I', 'a', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(2, 'I', 'b', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(3, 'I', 'c', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(4, 'I', 'd', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(5, 'II', 'a', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(6, 'II', 'b', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(7, 'II', 'c', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(8, 'II', 'd', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(9, 'III', 'a', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(10, 'III', 'b', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(11, 'III', 'c', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(12, 'III', 'd', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(13, 'IV', 'a', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(14, 'IV', 'b', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(15, 'IV', 'c', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(16, 'IV', 'd', '2022-01-12 13:22:23', '2022-01-12 13:22:23');
+(1, 'IV', 'a', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(2, 'IV', 'b', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(3, 'IV', 'c', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(4, 'IV', 'd', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(5, 'III', 'a', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(6, 'III', 'b', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(7, 'III', 'c', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(8, 'III', 'd', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(9, 'II', 'a', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(10, 'II', 'b', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(11, 'II', 'c', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(12, 'II', 'd', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(13, 'I', 'a', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(14, 'I', 'b', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(15, 'I', 'c', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(16, 'I', 'd', '2022-01-15 10:34:07', '2022-01-15 10:34:07');
 
 -- --------------------------------------------------------
 
@@ -283,9 +283,9 @@ CREATE TABLE `statuses` (
 --
 
 INSERT INTO `statuses` (`id`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Menunggu', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(2, 'Disetujui', '2022-01-12 13:22:23', '2022-01-12 13:22:23'),
-(3, 'Ditolak', '2022-01-12 13:22:23', '2022-01-12 13:22:23');
+(1, 'Menunggu', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(2, 'Disetujui', '2022-01-15 10:34:07', '2022-01-15 10:34:07'),
+(3, 'Ditolak', '2022-01-15 10:34:07', '2022-01-15 10:34:07');
 
 -- --------------------------------------------------------
 
@@ -328,7 +328,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator Perpustakaan', 'admin.perpustakaan@gmail.com', '2022-01-12 13:22:23', '$2y$10$DJZIPn0fv.cTb.cWM1qOIuZerJjcbL/6tZb39SqnTKvJnlkBvJMQS', 1, 'uZbOxDwUb9i3pQRFUPuM3BpSyHXA2EggbzjTaHCUC9lgjlq7LA8u62tzJwON', '2022-01-12 13:22:23', '2022-01-12 13:22:23');
+(1, 'Administrator Perpustakaan', 'admin.perpustakaan@gmail.com', '2022-01-15 10:34:06', '$2y$10$1JRQgKL98IFDUElhulEXc.ePzn7hzZPWQOnxnTKlqyqIwSWJSQuBq', 1, 'moZroxtb8F', '2022-01-15 10:34:07', '2022-01-15 10:34:07');
 
 --
 -- Indexes for dumped tables

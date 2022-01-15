@@ -15,42 +15,22 @@ class PangkatSeeder extends Seeder
     public function run()
     {
         Pangkat::create([
-            'golongan' => 'I',
+            'golongan' => 'IV',
             'ruang' => 'a',
         ]);
 
         Pangkat::create([
-            'golongan' => 'I',
+            'golongan' => 'IV',
             'ruang' => 'b',
         ]);
 
         Pangkat::create([
-            'golongan' => 'I',
+            'golongan' => 'IV',
             'ruang' => 'c',
         ]);
 
         Pangkat::create([
-            'golongan' => 'I',
-            'ruang' => 'd',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'II',
-            'ruang' => 'a',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'II',
-            'ruang' => 'b',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'II',
-            'ruang' => 'c',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'II',
+            'golongan' => 'IV',
             'ruang' => 'd',
         ]);
 
@@ -75,22 +55,42 @@ class PangkatSeeder extends Seeder
         ]);
 
         Pangkat::create([
-            'golongan' => 'IV',
+            'golongan' => 'II',
             'ruang' => 'a',
         ]);
 
         Pangkat::create([
-            'golongan' => 'IV',
+            'golongan' => 'II',
             'ruang' => 'b',
         ]);
 
         Pangkat::create([
-            'golongan' => 'IV',
+            'golongan' => 'II',
             'ruang' => 'c',
         ]);
 
         Pangkat::create([
-            'golongan' => 'IV',
+            'golongan' => 'II',
+            'ruang' => 'd',
+        ]);
+
+        Pangkat::create([
+            'golongan' => 'I',
+            'ruang' => 'a',
+        ]);
+
+        Pangkat::create([
+            'golongan' => 'I',
+            'ruang' => 'b',
+        ]);
+
+        Pangkat::create([
+            'golongan' => 'I',
+            'ruang' => 'c',
+        ]);
+
+        Pangkat::create([
+            'golongan' => 'I',
             'ruang' => 'd',
         ]);
     }

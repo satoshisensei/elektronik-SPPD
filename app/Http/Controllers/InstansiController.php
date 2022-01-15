@@ -108,7 +108,7 @@ class InstansiController extends Controller
 
         if($request->file('image')){
             if($request->oldImage){
-                Storage::deleted($request->oldImage);
+                Storage::delete([$request->oldImage]);
             }
             $validate['image'] = $request->file('image')->store('instansi-images');
         }
@@ -127,7 +127,7 @@ class InstansiController extends Controller
     public function destroy(Instansi $instansi)
     {
         if($instansi->image){
-            Storage::deleted($instansi->image);
+            Storage::delete([$instansi->image]);
         }
 
         Instansi::destroy($instansi->id);
