@@ -14,84 +14,27 @@ class PangkatSeeder extends Seeder
      */
     public function run()
     {
-        Pangkat::create([
-            'golongan' => 'IV',
-            'ruang' => 'a',
-        ]);
+        $golongan = [
+            'I',
+            'II',
+            'III',
+            'IV',
+        ];
 
-        Pangkat::create([
-            'golongan' => 'IV',
-            'ruang' => 'b',
-        ]);
+        $ruang = [
+            'a',
+            'b',
+            'c',
+            'd'
+        ];
 
-        Pangkat::create([
-            'golongan' => 'IV',
-            'ruang' => 'c',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'IV',
-            'ruang' => 'd',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'III',
-            'ruang' => 'a',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'III',
-            'ruang' => 'b',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'III',
-            'ruang' => 'c',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'III',
-            'ruang' => 'd',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'II',
-            'ruang' => 'a',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'II',
-            'ruang' => 'b',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'II',
-            'ruang' => 'c',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'II',
-            'ruang' => 'd',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'I',
-            'ruang' => 'a',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'I',
-            'ruang' => 'b',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'I',
-            'ruang' => 'c',
-        ]);
-
-        Pangkat::create([
-            'golongan' => 'I',
-            'ruang' => 'd',
-        ]);
+        foreach($golongan as $g){
+            foreach($ruang as $r){
+                Pangkat::create([
+                    'golongan' => $g,
+                    'ruang' => $r,
+                ]);
+            }
+        }
     }
 }

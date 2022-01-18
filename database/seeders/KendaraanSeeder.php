@@ -14,36 +14,21 @@ class KendaraanSeeder extends Seeder
      */
     public function run()
     {
-        Kendaraan::create([
-            'nama' => 'Dinas / Umum'
-        ]);
+        $kendaraan = [
+            'Dinas / Umum',
+            'Mobil Pribadi',
+            'Mobil Dinas',
+            'Bus Umum',
+            'Bus Dinas',
+            'Kereta Rel Listrik',
+            'Kapal laut',
+            'Pesawat'
+        ];
 
-        Kendaraan::create([
-            'nama' => 'Mobil Pribadi'
-        ]);
-
-        Kendaraan::create([
-            'nama' => 'Mobil Dinas'
-        ]);
-
-        Kendaraan::create([
-            'nama' => 'Bus Umum'
-        ]);
-
-        Kendaraan::create([
-            'nama' => 'Bus Dinas'
-        ]);
-
-        Kendaraan::create([
-            'nama' => 'Kereta Rel Listrik'
-        ]);
-
-        Kendaraan::create([
-            'nama' => 'Kapal Laut'
-        ]);
-
-        Kendaraan::create([
-            'nama' => 'Pesawat'
-        ]);
+        foreach($kendaraan as $k){
+            Kendaraan::create([
+                'nama' => $k
+            ]);
+        }
     }
 }

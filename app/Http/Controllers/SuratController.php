@@ -113,7 +113,7 @@ class SuratController extends Controller
     {
         $rules = [
             'nomor' => 'required',
-            'uraian' => 'required'
+            'uraian' => 'required',
         ];
 
         if($surat->pegawai != $request->pegawai){
@@ -122,10 +122,6 @@ class SuratController extends Controller
 
         if($surat->perjalanan != $request->perjalanan){
             $rules['perjalanan_id'] = 'required';
-        }
-
-        if(!$surat->status != $request->status){
-            $rules['status_id'] = 1;
         }
 
         if($surat->status != $request->status){

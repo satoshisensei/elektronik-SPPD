@@ -46,7 +46,7 @@
                                     {{ $message }}
                                 </div>
                             @enderror
-                        </div
+                        </div>
                         <div class="mb-3">
                             <label for="nomor" class="form-label">Nomor SPPD</label>
                             <input type="text" class="form-control @error('nomor')

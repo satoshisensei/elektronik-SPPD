@@ -14,16 +14,16 @@ class StatusSeeder extends Seeder
      */
     public function run()
     {
-        Status::create([
-            'status' => 'Menunggu'
-        ]);
+        $status = [
+            'Menunggu',
+            'Disetujui',
+            'Ditolak'
+        ];
 
-        Status::create([
-            'status' => 'Disetujui'
-        ]);
-
-        Status::create([
-            'status' => 'Ditolak'
-        ]);
+        foreach($status as $s){
+            Status::create([
+                'status' => $s
+            ]);
+        }
     }
 }

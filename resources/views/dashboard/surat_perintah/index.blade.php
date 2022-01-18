@@ -40,7 +40,9 @@
                         <a href="/surat/{{ $surat->id }}" class="btn btn-info" target="_blank"><i class="fas fa-eye"></i></a>|
                     @endif
                         {{-- <a href="/surat/pdf/{{ $surat->id }}" class="btn btn-dark" target="_blank"><i class="fas fa-file-pdf"></i></a>| --}}
+                        @can('admin')
                         <a href="/surat/{{ $surat->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
+                        @endcan
                         <form action="/surat/{{ $surat->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
