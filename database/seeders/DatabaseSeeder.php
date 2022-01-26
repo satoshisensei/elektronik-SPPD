@@ -29,9 +29,9 @@ class DatabaseSeeder extends Seeder
             JabatanSeeder::class,
             PangkatSeeder::class,
             // PengikutSeeder::class,
-            // PegawaiSeeder::class,
-            // PerjalananSeeder::class,
-            // SuratSeeder::class,
+            PegawaiSeeder::class,
+            PerjalananSeeder::class,
+            SuratSeeder::class,
             KendaraanSeeder::class,
             StatusSeeder::class,
         ]);

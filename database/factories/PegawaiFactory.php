@@ -16,7 +16,7 @@ class PegawaiFactory extends Factory
         return [
             'pangkat_id' => mt_rand(1,50),
             'jabatan_id' => mt_rand(3,25),
-            'pengikut_id' => mt_rand(1,50),
+            // 'pengikut_id' => mt_rand(1,50),
             'nama' => $this->faker->name(),
             'nip' => $this->faker->numerify('1999####' . '2021####' . '####'),
         ];
